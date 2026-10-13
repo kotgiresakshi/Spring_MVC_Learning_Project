@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Take a multiple-choice quiz on Spring MVC concepts and check your answers.">
+  <title>Spring MVC Quiz | Spring MVC Made Simple</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="quiz">
+  <header class="site-header">
+    <a class="brand" href="test.html" aria-label="Spring MVC Made Simple home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>Spring MVC <span class="brand-light">Made Simple</span></span>
+    </a>
+    <span class="header-note">Check what you learned</span>
+  </header>
+
+  <main class="page-shell">
+    <a class="back-link" href="success.html"><span aria-hidden="true">←</span> Back to your results</a>
+    <section class="quiz-intro">
+      <p class="eyebrow">SPRING MVC KNOWLEDGE CHECK</p>
+      <h1>Ready for the quiz?</h1>
+      <p>Choose one answer for each question, then select “Show score” to see your results and the correct answers. Unanswered questions are counted as incorrect.</p>
+    </section>
+
+    <form class="quiz-form" id="quiz-form">
+      <fieldset class="quiz-question" data-correct="b">
+        <legend>1. What is the main role of DispatcherServlet in Spring MVC?</legend>
+        <label class="quiz-option"><input type="radio" name="q1" value="a"> Stores application data for the View.</label>
+        <label class="quiz-option"><input type="radio" name="q1" value="b"> Receives requests and coordinates the MVC request flow.</label>
+        <label class="quiz-option"><input type="radio" name="q1" value="c"> Styles the page shown in the browser.</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="c">
+        <legend>2. Which component is responsible for handling a matched request?</legend>
+        <label class="quiz-option"><input type="radio" name="q2" value="a"> ViewResolver</label>
+        <label class="quiz-option"><input type="radio" name="q2" value="b"> Model</label>
+        <label class="quiz-option"><input type="radio" name="q2" value="c"> Controller</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="a">
+        <legend>3. What does the Model carry to a server-rendered page?</legend>
+        <label class="quiz-option"><input type="radio" name="q3" value="a"> Data the View needs to display.</label>
+        <label class="quiz-option"><input type="radio" name="q3" value="b"> The URL mapping for the request.</label>
+        <label class="quiz-option"><input type="radio" name="q3" value="c"> The browser’s CSS styles.</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="b">
+        <legend>4. What is the View in Spring MVC?</legend>
+        <label class="quiz-option"><input type="radio" name="q4" value="a"> The component that selects a Controller method.</label>
+        <label class="quiz-option"><input type="radio" name="q4" value="b"> The presentation that renders data for the user.</label>
+        <label class="quiz-option"><input type="radio" name="q4" value="c"> The HTTP request sent by the browser.</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="c">
+        <legend>5. What does HandlerMapping do?</legend>
+        <label class="quiz-option"><input type="radio" name="q5" value="a"> Saves form data in the browser.</label>
+        <label class="quiz-option"><input type="radio" name="q5" value="b"> Renders the template with Model data.</label>
+        <label class="quiz-option"><input type="radio" name="q5" value="c"> Finds the handler that matches the request.</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="a">
+        <legend>6. What is the purpose of a ViewResolver?</legend>
+        <label class="quiz-option"><input type="radio" name="q6" value="a"> Resolves a logical view name to a View.</label>
+        <label class="quiz-option"><input type="radio" name="q6" value="b"> Validates username and email fields.</label>
+        <label class="quiz-option"><input type="radio" name="q6" value="c"> Receives the initial browser request.</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="b">
+        <legend>7. Which sequence best describes the request flow before a server-rendered page is returned?</legend>
+        <label class="quiz-option"><input type="radio" name="q7" value="a"> View → Model → Browser → Controller</label>
+        <label class="quiz-option"><input type="radio" name="q7" value="b"> Browser → DispatcherServlet → mapped Controller → View</label>
+        <label class="quiz-option"><input type="radio" name="q7" value="c"> Model → Browser → ViewResolver → DispatcherServlet</label>
+      </fieldset>
+
+      <fieldset class="quiz-question" data-correct="c">
+        <legend>8. In a typical application, what can a Controller call to perform application or data work?</legend>
+        <label class="quiz-option"><input type="radio" name="q8" value="a"> A browser stylesheet.</label>
+        <label class="quiz-option"><input type="radio" name="q8" value="b"> A ViewResolver directly for every database query.</label>
+        <label class="quiz-option"><input type="radio" name="q8" value="c"> A service, which may use a repository to access data.</label>
+      </fieldset>
+
+      <div class="quiz-actions">
+        <button class="button button-primary" type="submit">Show score <span aria-hidden="true">→</span></button>
+        <a class="button button-secondary" href="test.html">Back to the lesson</a>
+      </div>
+    </form>
+
+    <section class="quiz-results" id="quiz-results" aria-labelledby="quiz-results-heading" aria-live="polite" hidden>
+      <h2 id="quiz-results-heading">Your quiz results</h2>
+      <p class="quiz-score" id="quiz-score"></p>
+      <ol class="quiz-feedback" id="quiz-feedback"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>Spring MVC Made Simple</span><span>Keep learning at your own pace.</span></footer>
+</body>
+</html>

@@ -117,9 +117,53 @@ function initializeSuccessPage() {
   });
 }
 
+function initializeQuiz() {
+  const form = document.getElementById('quiz-form');
+  const results = document.getElementById('quiz-results');
+  const score = document.getElementById('quiz-score');
+  const feedback = document.getElementById('quiz-feedback');
+  const questions = Array.from(form.querySelectorAll('[data-correct]'));
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let correctCount = 0;
+    feedback.replaceChildren();
+
+    questions.forEach((question, index) => {
+      const selected = question.querySelector('input:checked');
+      const correctInput = question.querySelector(`input[value="${question.dataset.correct}"]`);
+      const correctAnswer = correctInput.closest('label').textContent.trim();
+      const isCorrect = selected !== null && selected.value === question.dataset.correct;
+
+      if (isCorrect) {
+        correctCount += 1;
+      }
+
+      const resultItem = document.createElement('li');
+      const questionText = document.createElement('strong');
+      const status = document.createElement('span');
+      const answer = document.createElement('p');
+
+      resultItem.className = isCorrect ? 'quiz-result-correct' : 'quiz-result-incorrect';
+      questionText.textContent = `Question ${index + 1}: `;
+      status.textContent = isCorrect ? 'Correct' : selected ? 'Incorrect' : 'Not answered';
+      answer.textContent = `Your answer: ${selected ? selected.closest('label').textContent.trim() : 'No answer selected.'} Correct answer: ${correctAnswer}`;
+      resultItem.append(questionText, status, answer);
+      feedback.append(resultItem);
+    });
+
+    score.textContent = `Your score: ${correctCount} out of ${questions.length}`;
+    results.hidden = false;
+    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
 const currentPage = document.body.dataset.page;
 if (currentPage === 'form') {
   initializeForm();
 } else if (currentPage === 'success') {
   initializeSuccessPage();
+} else if (currentPage === 'quiz') {
+  initializeQuiz();
 }
