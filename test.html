@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly introduction to Spring MVC concepts and request flow.">
+  <title>Spring MVC Made Simple</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="lesson">
+  <header class="site-header">
+    <a class="brand" href="test.html" aria-label="Spring MVC Made Simple home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>Spring MVC <span class="brand-light">Made Simple</span></span>
+    </a>
+    <span class="header-note">A beginner-friendly guide</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">YOUR FIRST STEP INTO WEB DEVELOPMENT</p>
+      <h1>Spring MVC, <span>made simple.</span></h1>
+      <p class="hero-copy">Meet the pieces behind a web request, and see how they work together. No experience needed.</p>
+      <div class="topic-chips" aria-label="Topics covered">
+        <span>Model</span><span>View</span><span>Controller</span><span>Request flow</span>
+      </div>
+    </section>
+
+    <section class="lesson-section" aria-labelledby="concepts-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE BUILDING BLOCKS</p>
+          <h2 id="concepts-heading">The main ideas</h2>
+        </div>
+        <p>Think of an app like a helpful restaurant: each part has a clear job.</p>
+      </div>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span class="card-number">01</span>
+          <div class="concept-icon icon-green" aria-hidden="true">M</div>
+          <h3>What is Spring MVC?</h3>
+          <p>Spring MVC is a way to organize a web application. It separates handling requests, working with information, and showing a page so each part has a focused job.</p>
+        </article>
+        <article class="concept-card">
+          <span class="card-number">02</span>
+          <div class="concept-icon icon-blue" aria-hidden="true">D</div>
+          <h3>Model</h3>
+          <p>The Model holds the information a page needs. For example, it might carry a person’s name or a list of products to show.</p>
+        </article>
+        <article class="concept-card">
+          <span class="card-number">03</span>
+          <div class="concept-icon icon-purple" aria-hidden="true">V</div>
+          <h3>View</h3>
+          <p>The View is what the visitor sees: the web page displayed in their browser. It uses information from the Model to show useful content.</p>
+        </article>
+        <article class="concept-card">
+          <span class="card-number">04</span>
+          <div class="concept-icon icon-amber" aria-hidden="true">C</div>
+          <h3>Controller</h3>
+          <p>The Controller receives a visitor’s request, decides what needs to happen, and prepares the information and page to send back.</p>
+        </article>
+        <article class="concept-card concept-card-wide">
+          <span class="card-number">05</span>
+          <div class="concept-icon icon-coral" aria-hidden="true">↗</div>
+          <h3>DispatcherServlet</h3>
+          <p>Think of DispatcherServlet as a friendly front desk. It receives incoming web requests and sends each one to the right Controller. It then helps return the finished page to the visitor.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="flow-section" aria-labelledby="flow-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FROM CLICK TO PAGE</p>
+          <h2 id="flow-heading">How a request flows</h2>
+        </div>
+        <p>Here’s what happens when someone visits a page or submits a form.</p>
+      </div>
+      <ol class="flow-list">
+        <li><span class="flow-step">1</span><div><strong>A visitor makes a request</strong><p>They click a link or submit a form in their browser.</p></div></li>
+        <li><span class="flow-step">2</span><div><strong>DispatcherServlet receives it</strong><p>The front desk gets the request and finds the right Controller.</p></div></li>
+        <li><span class="flow-step">3</span><div><strong>The Controller does the work</strong><p>It handles the request and gathers any information the page needs.</p></div></li>
+        <li><span class="flow-step">4</span><div><strong>The Model carries the information</strong><p>The Controller puts the relevant data into the Model.</p></div></li>
+        <li><span class="flow-step">5</span><div><strong>The View becomes a page</strong><p>The View uses the information to create a page, which is sent back to the visitor.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="next-step">
+      <div>
+        <p class="eyebrow">READY TO TRY IT?</p>
+        <h2>Put your knowledge to work.</h2>
+        <p>Continue to a short form and practice entering information.</p>
+      </div>
+      <a class="button button-primary" href="details.html">Test what you learned <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>Spring MVC Made Simple</span><span>Learn one concept at a time.</span></footer>
+</body>
+</html>
