@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Practice form validation with a username, email, and summary.">
+  <title>Your Practice Form | Spring MVC Made Simple</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="form">
+  <header class="site-header">
+    <a class="brand" href="test.html" aria-label="Spring MVC Made Simple home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>Spring MVC <span class="brand-light">Made Simple</span></span>
+    </a>
+    <span class="header-note">Your practice form</span>
+  </header>
+
+  <main class="page-shell narrow-shell">
+    <a class="back-link" href="test.html"><span aria-hidden="true">←</span> Back to the lesson</a>
+    <section class="form-intro">
+      <p class="eyebrow">A LITTLE PRACTICE</p>
+      <h1>Share a few details.</h1>
+      <p>Fill in each field below. We’ll check that everything looks right before you continue.</p>
+    </section>
+
+    <form class="details-form" id="details-form" novalidate>
+      <div class="form-field">
+        <label for="username">Username <span class="required-mark" aria-hidden="true">*</span></label>
+        <p class="field-hint" id="username-hint">Use English letters only, with no spaces or numbers.</p>
+        <input id="username" name="username" type="text" autocomplete="username" aria-describedby="username-hint username-error" required>
+        <p class="field-error" id="username-error" aria-live="polite"></p>
+      </div>
+      <div class="form-field">
+        <label for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+        <p class="field-hint" id="email-hint">Enter an email address that ends with @gmail.com.</p>
+        <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-hint email-error" required>
+        <p class="field-error" id="email-error" aria-live="polite"></p>
+      </div>
+      <div class="form-field">
+        <label for="summary">Summary <span class="required-mark" aria-hidden="true">*</span></label>
+        <p class="field-hint" id="summary-hint">In a sentence or two, what did you learn?</p>
+        <textarea id="summary" name="summary" rows="5" aria-describedby="summary-hint summary-error" required></textarea>
+        <p class="field-error" id="summary-error" aria-live="polite"></p>
+      </div>
+      <div class="form-actions">
+        <button class="button button-primary" type="submit">Submit details <span aria-hidden="true">→</span></button>
+        <a class="button button-secondary" href="test.html">Back</a>
+      </div>
+      <p class="form-note"><span aria-hidden="true">*</span> All fields are required.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer"><span>Spring MVC Made Simple</span><span>Your progress stays in this browser.</span></footer>
+</body>
+</html>
